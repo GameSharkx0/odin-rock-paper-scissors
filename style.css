@@ -1,0 +1,81 @@
+body{
+    display: flex;
+    justify-content: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    /* border: 2px red dashed; */
+    width: 40vw;
+}
+.player-card{
+    width: 40vw;
+    display: flex;
+    justify-content: space-around;
+    display: flex;
+    /* border: 2px red dashed; */
+}
+
+#screen{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border: 4px black solid;
+    width: 40vw;
+}
+
+img{
+    width: 200px;
+    height:200px;
+}
+
+.main-text-2{
+    font-size: 18px;
+}
+
+#menu-row{
+
+}
+
+#fight-section{
+    width: 25vw;
+    height: 80px;
+    border: 2px black solid;
+}
+
+#menu-options{
+    display: flex;
+    flex-direction: row;
+}
+
+#decision-section{
+    width: 15vw;
+    border: 2px black solid;
+}
+
+#menu-subsection{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+h4{
+    font-size: 12px;
+    margin: 10px;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0 5px;
+}
+
+li{
+    padding: 0;
+}
+
+#title-card{
+    text-align: center;
+}
