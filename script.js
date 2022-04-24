@@ -42,7 +42,9 @@ const wins = document.getElementById("wins");
 const losses = document.getElementById("losses");
 const ratio = document.getElementById("wr-percent");
 const testImg = document.getElementById("screen-image");
-
+const sound = document.getElementById("sound");
+let colorArray = ["red", "blue", "#green", "orange", "purple", "gold"];
+let titleSounds = false;
 
 let battle = (playerChoice, computerChoice) => {
     changeZ(3500);
@@ -221,6 +223,10 @@ let isClicked = () => {
 let defaultMusic = (pause) => {
     defaultAudio.volume = .8;
     defaultAudio.play();
+    sound.style.opacity = "0%";
+    setTimeout(() => {
+        sound.style.display = "none";
+    }, 2000);
 }
 
 let battleMusic = () => {
@@ -526,6 +532,35 @@ let resetGame = (playAgain) => {
     yesNoMenu.style.display = "none";
 }
 
+let rainbowButton = (isClicked) => {
+    setTimeout(() => {
+        let i  = Math.floor(Math.random()*colorArray.length);
+        sound.style.color = colorArray[i];
+    }, 1000);
+    setTimeout(() => {
+        let i  = Math.floor(Math.random()*colorArray.length);
+        sound.style.color = colorArray[i];
+    }, 2000);
+    setTimeout(() => {
+        let i  = Math.floor(Math.random()*colorArray.length);
+        sound.style.color = colorArray[i];
+    }, 4000);
+    setTimeout(() => {
+        let i  = Math.floor(Math.random()*colorArray.length);
+        sound.style.color = colorArray[i];
+    }, 6000);
+    setTimeout(() => {
+        let i  = Math.floor(Math.random()*colorArray.length);
+        sound.style.color = colorArray[i];
+    }, 8000);
+    setTimeout(() => {
+        let i  = Math.floor(Math.random()*colorArray.length);
+        sound.style.color = colorArray[i];
+    }, 10000);
+}
+
+rainbowButton();
+
 splash.addEventListener("click", () => {
     setTimeout(() => {
         splashFade("out");
@@ -557,4 +592,4 @@ paperChoice.addEventListener("click", () => handlePlayerFightDecision("p"));
 
 scissorsChoice.addEventListener("click", () => handlePlayerFightDecision("s"));
 
-defaultMusic();
+sound.addEventListener("click", () => defaultMusic());
