@@ -13,57 +13,96 @@
 <body>
     <div id="content">
         <div id="title-card">
-            <h1>Pocket Janken!</h1>
+            <h1>Pockét Janken!</h1>
             <h1> The Game</h1>
         </div>
-        <div id="screen">
-            <div id="enemy-row" class="row">
-                <div class="player-card">
-                    <div id="hp-card-enemy">
-                        <h2 id="enemy-player-name" class="main-text-2">JASON</h2>
-                        <div class="hp-visuals">
-                            <h2 class="main-text-2">:L36</h2>
-                        </div>
-                    </div>
-                    <div id="enemy-icon">
-                        <img id="enemy-image" class="character-image" src="enemy-ditto-bw.png" alt="DITTO">
-                    </div>
+        <div id="screen-overlay">
+            <div id="screen">
+                <!-- <div id="screen-overlay-1">
+                </div> -->
+                <div id="splash" class="click-sound">
+                    <img id="screen-logo" src="pocketlogo.png">
+                    <h3 id="click-to-start">click to start</h3>
+                    <img id="screen-image" src="enemy-ditto-bw.png">
+                    <h3 class="bottom-pos">Trademark Antwan Hill</h3>
                 </div>
-            </div>
-            <div id="player-row" class="row">
-                <div class="player-card">
-                    <div id="player-icon">
-                        <img id="player-image" class="character-image" src="player-ditto-bw.png" alt="DITTO">
-                    </div>
-                    <div id="hp-card-player">
-                        <h2 id="player-name" class="main-text-2">JSON</h2>
-                        <div class="hp-visuals">
-                            
-                            <h2 class="main-text-2">:L42</h2>
+                <div id="game">
+                    <div id="enemy-row" class="row">
+                        <div class="player-card">
+                            <div id="hp-card-enemy" class="slide-in-right slide-in-transition">
+                                <h2 id="enemy-player-name" class="main-text-2">JASON</h2>
+                                <div id="hp-visuals-enemy">
+                                    <h2 class="main-text-2">:L36</h2>
+                                    <div class="hp-container hp-container-enemy">
+                                        <div class="hp-text">HP:</div>
+                                        <div id="enemy-hp" class="health-bar">
+                                            <div id="enemy-damage" class="health-damage"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="enemy-icon"  class="slide-in-left slide-in-transition">
+                                <img id="enemy-image" class="character-image" src="enemy-ditto-bw.png" alt="DITTO">
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div id="menu-row" class="row">
-                <div id="menu">
-                    <div id="menu-options">
-                        <div id="fight-section">
-
-                        </div>
-                    <div id="decision-section">
-                        <div class="menu-subsection">
-                            <ul>
-                                <li id="menu-option-1"><h4 class="main-text">FIGHT</h4></li>
-                                <li id="menu-option-2"><h4 class="main-text">HELP</h4></li>
-                            </ul>
-                        </div>
-                        <div class="menu-subsection">
-                            <ul>
-                            <li id="menu-option-3"><h4 class="main-text">CHEAT</h4></li>
-                            <li id="menu-option-4"><h4 class="main-text">RUN</h4></li>
-                            </ul>
+                    <div id="player-row" class="row">
+                        <div class="player-card">
+                            <div id="player-icon" class="slide-in-right slide-in-transition">
+                                <img id="player-image" class="character-image" src="player-ditto-bw.png" alt="DITTO">
+                            </div>
+                            <div id="hp-card-player" class="slide-in-left slide-in-transition">
+                                <h2 id="player-name" class="main-text-2">JSON</h2>
+                                <div id="hp-visuals-player">
+                                    <h2 class="main-text-2">:L42</h2>
+                                    <div class="hp-container hp-container-player">
+                                        <div class="hp-text">HP:</div>
+                                        <div id="player-hp" class="health-bar">
+                                            <div id="player-damage" class="health-damage"></div>
+                                        </div>
+                                    </div>
+                                    <div id="player-hp-num"><span id="hp-remaining">150</span> / 150</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div id="menu-row" class="row">
+                        <div id="menu">
+                            <div id="menu-options">
+                                <div id="fight-section">
+                                    <div id="fight-section-alt">
+                                    </div>
+                                    <ul id="fight-section-pt1">
+                                        <li id="rock" class="hover click-sound">Rock</li>
+                                        <li id="scissors" class="hover click-sound">Scissors</li>
+                                    </ul>
+                                    <ul id="fight-section-pt2">
+                                        <li id="paper" class="hover click-sound">Paper</li>
+                                        <li id="extra" class="hover click-sound">-</li>
+                                    </ul>
+                                </div>
+                            <div id="decision-section">
+                                <div class="menu-subsection">
+                                    <div id="menu-options-alt">
+                                        <ul id="menu-options-alt-ul">
+                                            <li id="yes">YES</li>
+                                            <li id="no">NO</li>
+                                        </ul>
+                                    </div>
+                                    <ul>
+                                        <li id="menu-option-1"><h4 class="main-text hover click-sound">FIGHT</h4></li>
+                                        <li id="menu-option-2"><h4 class="main-text hover click-sound">HELP</h4></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-subsection click-sound">
+                                    <ul>
+                                    <li id="menu-option-3"><h4 class="main-text hover click-sound">CHEAT</h4></li>
+                                    <li id="menu-option-4"><h4 class="main-text hover click-sound">RUN</h4></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -75,7 +114,16 @@
                 <li>Choose Rock, Paper, or Scissors</li>
                 <li>Defeat your oponent(hopefully).</li>
             </ol>
+            <h1>Winrate</h1>
+            <h3>W:<span id="wins">0</span> L:<span id="losses">0</span> <span id="wr-percent">0</span>%</h3>
         </div>
     </div>
+    <audio id="defaultAudio" src="title.mp3" type="audio/mp3" loop=""></audio>
+    <audio id="battleAudio" src="battle.mp3" type="audio/mp3" loop=""></audio>
+    <audio id="victoryAudio" src="Victory.mp3" type="audio/mp3"></audio>
+    <audio id="lowHpAudio" src="LowHp.mp3" type="audio/mp3" loop=""></audio>
+    <audio id="faintAudio" src="Faint.mp3" type="audio/mp3"></audio>
+    <audio id="hitAudio" src="Hit.mp3" type="audio/mp3" loop=""></audio>
+    <script src="script.js"></script>
 </body>
 </html>
