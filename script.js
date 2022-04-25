@@ -562,6 +562,10 @@ let rainbowButton = (isClicked) => {
 rainbowButton();
 
 splash.addEventListener("click", () => {
+    sound.style.opacity = "0%";
+    setTimeout(() => {
+        sound.style.display = "none";
+    }, 2000);
     setTimeout(() => {
         splashFade("out");
     }, 100);
