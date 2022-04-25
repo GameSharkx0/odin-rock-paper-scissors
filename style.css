@@ -1,3 +1,4 @@
+
 body{
     display: flex;
     justify-content: center;
@@ -8,10 +9,10 @@ body{
     display: flex;
     justify-content: center;
     /* border: 2px red dashed; */
-    width: 40vw;
+    /* width: 40vw; */
 }
 .player-card{
-    width: 40vw;
+    width: auto;
     display: flex;
     justify-content: space-around;
     display: flex;
@@ -262,3 +263,56 @@ li{
     color: gold;
 }
 
+@media (max-width: 450px) {
+    #screen{
+        width: 350px;  
+    }
+    #decision-section{
+        display: flex;
+        flex-flow: row wrap;
+        width: 125px;
+    }
+
+    .hp-text{
+        display: none;
+    }
+
+    #player-hp, #enemy-hp{
+        width: 150px;
+    }
+
+    .menu-subsection{
+        display: flex;
+    }
+    #fight-section-pt1, #fight-section-pt2{
+        margin: 0px;
+    }
+    #menu-option-1, #menu-option-2, #menu-option-3,#menu-option-4{
+        margin-top: 10px;
+        margin-right: 5px;
+    }
+
+    #fight-section{
+        width: 225px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hover{
+        margin: 0px;
+    }
+
+    #yes, #no{
+        font-size: 16px;
+        margin: 15px;
+    }
+    .bottom-pos {
+        font-size: 16px;
+    }
+
+    .slide-in-transition{
+        width: 160px;
+        margin: 7px;
+    }
+}

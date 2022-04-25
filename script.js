@@ -11,7 +11,7 @@ let enemyHp = 0;
 const playerHpNum = document.getElementById("hp-remaining");
 const computerOptions = [0, 1, 2];
 const choiceArray = ["r", "p", "s"];
-const damageValues = ["50px", "100px", "150px"];
+let damageValues = ["50px", "100px", "150px"];
 let playerChoice;
 const menuOptions = document.getElementsByClassName("click-sound"); 
 const clickToStart = document.getElementById("click-to-start");
